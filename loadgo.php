@@ -1,0 +1,70 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+/*
+Plugin Name: LoadGo for WP
+Plugin URI: http://franverona.com/loadgo
+Description: Create an automatic page load progress bar using <a href="http://github.hubspot.com/pace/docs/welcome/">PACE</a> and <a href="http://franverona.com/loadgo">Loadgo</a> Javascript plugin.
+Version: 1.0
+Author: Fran Verona
+Author URI: http://franverona.com
+*/
+
+class loadgo {
+
+  // Constructor for the class.
+  public function __construct () {
+
+    // Add default options when activate
+    register_activation_hook( __FILE__ , array( $this, 'loadgo_add_defaults' ) );
+
+    // Remove plugin options when uninstall
+    register_uninstall_hook( __FILE__, array( $this, 'loadgo_delete_plugin_options' ) );
+
+    add_action( 'init', array( $this, 'loadgo_options_page' ));
+    add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array( $this, 'loadgo_add_settings_link') );
+    add_action( 'wp_enqueue_scripts', array( $this, 'loadgo_sitewide' ) );
+	}
+
+	public function loadgo_options_page () {
+		require_once( dirname( __FILE__ ).'/loadgo-options.php' );
+	}
+
+  static function loadgo_add_defaults () {
+    $opt = get_option('loadgo_options');
+    if ( !is_array($opt) ) {
+      // First time activation
+      delete_option('loadgo_options');
+      $arr = array( 
+        "loadgo-visibility"     => "admin",
+        "loadgo-image"          => plugin_dir_url( __FILE__ ) . "img/example.png",
+        "loadgo-progress"       => "true",
+        "loadgo-progress-color" => "#000000",
+        "loadgo-message"        => "false",
+        "loadgo-bgcolor"        => "#FFFFFF",
+        "loadgo-size"           => "100",
+        "loadgo-opacity"        => "0.5",
+        "loadgo-direction"      => "lr"
+      );
+      update_option('loadgo_options', $arr);
+    }
+  }
+
+  static function loadgo_delete_plugin_options () {
+    delete_option('loadgo_options');
+  }
+
+	public function loadgo_add_settings_link ($links) {
+		$settings_link = '<a href="options-general.php?page=wp-loadgo/loadgo-options.php">Settings</a>';
+		$help_link = '<a href="http://franverona.com/loadgo/">Help</a>';
+	
+		array_push( $links, $settings_link, $help_link );
+		return $links;
+	}
+
+	public function loadgo_sitewide () {
+		include_once('methods/loadgo_sitewide.php');
+	}
+
+}
+
+$loadgo = new loadgo();
