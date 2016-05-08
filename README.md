@@ -6,6 +6,8 @@ For further information about LoadGo, see this link: [http://franverona.com/load
 
 For a working demo of **LoadGo for WP**: [http://franverona.com/wploadgo](http://franverona.com/wploadgo)
 
+Official Wordpress link: [https://wordpress.org/plugins/loadgo-for-wp/](https://wordpress.org/plugins/loadgo-for-wp/)
+
 ## Changelog
 
 **1.0** (05-05-2016)
