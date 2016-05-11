@@ -2,9 +2,11 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /*
 Plugin Name: LoadGo for WP
+Text Domain: loadgo-for-wp
+Domain Path: /languages
 Plugin URI: http://franverona.com/loadgo
 Description: Create an automatic page load progress bar using <a href="http://github.hubspot.com/pace/docs/welcome/">PACE</a> and <a href="http://franverona.com/loadgo">Loadgo</a> Javascript plugin.
-Version: 1.0
+Version: 1.1
 Author: Fran Verona
 Author URI: http://franverona.com
 */
@@ -20,14 +22,27 @@ class loadgo {
     // Remove plugin options when uninstall
     register_uninstall_hook( __FILE__, array( $this, 'loadgo_delete_plugin_options' ) );
 
-    add_action( 'init', array( $this, 'loadgo_options_page' ));
+    add_action( 'init', array( $this, 'loadgo_translation' ) );
+    add_action( 'init', array( $this, 'loadgo_options_page' ) );
     add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array( $this, 'loadgo_add_settings_link') );
     add_action( 'wp_enqueue_scripts', array( $this, 'loadgo_sitewide' ) );
 	}
 
 	public function loadgo_options_page () {
-		require_once( dirname( __FILE__ ).'/loadgo-options.php' );
+		require_once( dirname( __FILE__ ) . '/loadgo-options.php' );
 	}
+
+  public function loadgo_translation () {
+
+    $domain = 'loadgo-for-wp';
+    $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+    if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {
+      return $loaded;
+    } else {
+      load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+    }
+
+  }
 
   static function loadgo_add_defaults () {
     $opt = get_option('loadgo_options');
@@ -54,7 +69,7 @@ class loadgo {
   }
 
 	public function loadgo_add_settings_link ($links) {
-		$settings_link = '<a href="options-general.php?page=wp-loadgo/loadgo-options.php">Settings</a>';
+		$settings_link = '<a href="options-general.php?page=loadgo-for-wp/loadgo-options.php">LoadGo for WP</a>';
 		$help_link = '<a href="http://franverona.com/loadgo/">Help</a>';
 	
 		array_push( $links, $settings_link, $help_link );

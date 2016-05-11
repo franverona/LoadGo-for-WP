@@ -2,11 +2,14 @@
 
 Use your logo as a loader for your website/blog. This plugin uses [PACE](http://github.hubspot.com/pace/docs/welcome/) and [LoadGo](http://franverona.com/loadgo).
 
-For further information about LoadGo, see this link: [http://franverona.com/loadgo](http://franverona.com/loadgo)
-
-For a working demo of **LoadGo for WP**: [http://franverona.com/wploadgo](http://franverona.com/wploadgo)
+*  [LoadGo official site](http://franverona.com/loadgo)
+*  [Working demo](http://franverona.com/wploadgo)
+*  [Official Wordpress plugin page](https://wordpress.org/plugins/loadgo-for-wp/)
 
 ## Changelog
+
+**1.1** (11-05-2016)
+*  Added translations for english and spanish languages.
 
 **1.0** (05-05-2016)
 *  First release.
@@ -16,15 +19,15 @@ For a working demo of **LoadGo for WP**: [http://franverona.com/wploadgo](http:/
 *  Upload your logo and use it as a progress bar.
 *  Loading page process will be managed automatically by PACE.
 *  LoadGo will take care of logo updates when page is loading.
-*  You will be able to customize image size, overlay color, visibility and more.
+*  You will be able to customize image size, overlay color, visibility and much more.
 
 ## Installation
 
-1. Download **LoadGo for WP** from [this link](https://github.com/franverona/LoadGo-for-WP/archive/master.zip) or [clone it from GitHub](https://github.com/franverona/LoadGo-for-WP).
+1. Download **LoadGo for WP** from [this link](https://github.com/franverona/LoadGo-for-WP/archive/master.zip), [clone it from GitHub](https://github.com/franverona/LoadGo-for-WP), search for it directly in Wordpress plugin section in your own Wordpress site, or [download it from Wordpress official plugin's site](https://downloads.wordpress.org/plugin/loadgo-for-wp.zip).
 
-2. Rename downloaded zip to **wp-loadgo.zip**.
+2. Rename downloaded zip to **loadgo-for-wp.zip** (if different name).
 
-2. Upload **wp-loadgo.zip** to the **/wp-content/plugins/** directory.
+2. Upload **loadgo-for-wp.zip** to the **/wp-content/plugins/** directory.
 
 3. Activate the plugin through the 'Plugins' menu in WordPress.
 

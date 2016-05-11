@@ -10,14 +10,14 @@ function loadgo_init () {
   //  General options
   add_settings_section( 
     'loadgo_plugin_general_options', 
-    'General options', 
+    __( 'General options', 'loadgo-for-wp' ), 
     'loadgo_plugin_general_options_section', 
     'loadgo_plugin_general_options_section' );
 
   // Visibility
   add_settings_field( 
     'loadgo-visibility', 
-    'Visibility', 
+    __( 'Visibility', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_visibility', 
     'loadgo_plugin_general_options_section', 
     'loadgo_plugin_general_options' );
@@ -25,7 +25,7 @@ function loadgo_init () {
   // Loadgo Image
   add_settings_field( 
     'loadgo-image', 
-    'Logo image', 
+    __( 'Logo image', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_image', 
     'loadgo_plugin_general_options_section', 
     'loadgo_plugin_general_options' );
@@ -33,7 +33,7 @@ function loadgo_init () {
   // Show progress number
   add_settings_field( 
     'loadgo-progress', 
-    'Show progress', 
+    __( 'Show progress', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_progress', 
     'loadgo_plugin_general_options_section', 
     'loadgo_plugin_general_options' );
@@ -41,7 +41,7 @@ function loadgo_init () {
   // Progress number color
   add_settings_field( 
     'loadgo-progress-color', 
-    'Progress color', 
+    __( 'Progress color', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_progress_color', 
     'loadgo_plugin_general_options_section', 
     'loadgo_plugin_general_options' );
@@ -49,7 +49,7 @@ function loadgo_init () {
   // Show message
   add_settings_field( 
     'loadgo-message', 
-    'Show message', 
+    __( 'Show message', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_message', 
     'loadgo_plugin_general_options_section', 
     'loadgo_plugin_general_options' );
@@ -58,21 +58,21 @@ function loadgo_init () {
   //  LoadGo options section
   add_settings_section( 
     'loadgo_plugin_display_options', 
-    'LoadGo options', 
+    __( 'LoadGo options', 'loadgo-for-wp' ), 
     'loadgo_plugin_display_options_section', 
     'loadgo_plugin_display_options_section' );
   
   // Page background color
   add_settings_field( 
     'loadgo-bgcolor', 
-    'Background color', 
+    __( 'Background color', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_bgcolor', 
     'loadgo_plugin_display_options_section', 'loadgo_plugin_display_options' );
 
   // Logo size
   add_settings_field( 
     'loadgo-size', 
-    'Size', 
+    __( 'Size', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_size', 
     'loadgo_plugin_display_options_section', 
     'loadgo_plugin_display_options' );
@@ -80,7 +80,7 @@ function loadgo_init () {
   // Overlay opacity
   add_settings_field( 
     'loadgo-opacity', 
-    'Opacity', 
+    __( 'Opacity', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_opacity', 
     'loadgo_plugin_display_options_section', 
     'loadgo_plugin_display_options' );
@@ -88,7 +88,7 @@ function loadgo_init () {
   // LoadGo direction
   add_settings_field( 
     'loadgo-direction', 
-    'Direction', 
+    __( 'Direction', 'loadgo-for-wp' ), 
     'loadgo_plugin_setting_direction', 
     'loadgo_plugin_display_options_section', 
     'loadgo_plugin_display_options' );
@@ -105,7 +105,7 @@ function loadgo_enqueue_color_picker () {
 // Plugin options page
 add_action('admin_menu', 'loadgo_add_options_page');
 function loadgo_add_options_page () {
-  add_options_page('Loadgo Settings Page', 'Loadgo', 'manage_options', __FILE__, 'loadgo_render_form');
+  add_options_page(__( 'Loadgo Settings Page', 'loadgo-for-wp' ), 'Loadgo', 'manage_options', __FILE__, 'loadgo_render_form');
 }
 
 // Plugin options form
@@ -117,11 +117,11 @@ function loadgo_render_form () {
     <div style="float:left;padding-top: 14px;margin-right: 6px;">
       <span class="dashicons dashicons-admin-generic"></span>
     </div>
-    <h1>Options</h1>
+    <h1><?php _e( 'Options', 'loadgo-for-wp' ) ?></h1>
         
 <?php    
   if ( !current_user_can( 'manage_options' ) )
-    wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+    wp_die( _e( 'You do not have sufficient permissions to access this page.', 'loadgo-for-wp' ) );
   else {
 ?>
     <!-- Beginning of the Plugin Options Form -->
@@ -207,7 +207,7 @@ function loadgo_plugin_general_options_section () {
 
 // LoadGo Section description
 function loadgo_plugin_display_options_section () {
-  echo 'These settings let you customize Loadgo style. You can modify overlay color, image effect, animation direction, etc. Take a look at <a href="http://franverona.com/loadgo" target="_blank">Loadgo Official site</a> for info and examples.';
+  _e( 'These settings let you customize Loadgo style. You can modify overlay color, animation direction, etc. Take a look at <a href="http://franverona.com/loadgo" target="_blank">Loadgo Official site</a> for info and examples.', 'loadgo-for-wp' );
 }
 
 //
@@ -218,11 +218,11 @@ function loadgo_plugin_setting_visibility () {
   $loadgovisibility = $options['loadgo-visibility']? $options['loadgo-visibility'] : 'admin';
   ?>
     <select name='loadgo_options[loadgo-visibility]'>
-      <option value='all' <?php selected('all', $loadgovisibility); ?>>Everyone</option>
-      <option value='admin' <?php selected('admin', $loadgovisibility); ?>>Only admins</option>
+      <option value='all' <?php selected('all', $loadgovisibility); ?>><?php _e( 'Everyone', 'loadgo-for-wp' ) ?></option>
+      <option value='admin' <?php selected('admin', $loadgovisibility); ?>><?php _e( 'Only admins', 'loadgo-for-wp' ) ?></option>
     </select>
   <?php
-  echo '<div class="description">"Only admins" option is a good choice if you are testing a new image and do not want your new visitors to see it. Default: <strong>Only Admins</strong>.</div>';
+  echo '<div class="description">' . __( '"Only admins" option is a good choice if you are testing a new image and do not want your new visitors to see it.', 'loadgo-for-wp' ) . '</div>';
 }
 
 //
@@ -233,18 +233,18 @@ function loadgo_plugin_setting_image () {
   $loadgoimage = $options['loadgo-image']? $options['loadgo-image'] : plugin_dir_url( __FILE__ ) . 'img/example.png';
 
   echo '<input id="loadgo-input-file" type="file" name="loadgo_image" value="'. $loadgoimage .'" />';
-  echo '<div id="loadgo-input-file-error" style="display:none;color:#c30710">Invalid file. Try to upload an image file: jpg, jpeg, gif, png.</div>';
+  echo '<div id="loadgo-input-file-error" style="display:none;color:#c30710">' . __( 'Invalid file. Try to upload an image file: jpg, jpeg, gif, png.', 'loadgo-for-wp' ) . '</div>';
   echo '
     <div id="loadgo-logo-preview">
       <img src="' . $loadgoimage . '" alt="logo" />
     </div>';
   echo '
     <div style="margin-top:10px;">
-      Upload your image here.
-      <ul class="loadgo-ul">
-      <li>An image with transparency (PNG) provides best results.</li>
-      <li>Optimize your image: do not upload a big file if you will not need it.</li>
-      <li>Try to upload a small version of your logo. Images < 100Kb work better.</li>
+      ' . __( 'Upload your image here.', 'loadgo-for-wp' ) .
+      '<ul class="loadgo-ul">
+      <li>' . __( 'An image with transparency (PNG) provides best results.', 'loadgo-for-wp' ) . '</li>
+      <li>' . __( 'Optimize your image: do not upload a big file if you will not need it.', 'loadgo-for-wp' ) . '</li>
+      <li>' . __( 'Try to upload a small version of your logo. Images < 100Kb work better.', 'loadgo-for-wp' ) . '</li>
       </ul>
     </div>';
 }
@@ -257,11 +257,11 @@ function loadgo_plugin_setting_progress () {
   $loadgoprogress = $options['loadgo-progress']? $options['loadgo-progress'] : 'true';
   ?>
     <select name='loadgo_options[loadgo-progress]'>
-      <option value='true' <?php selected('true', $loadgoprogress); ?>>Yes</option>
-      <option value='false' <?php selected('false', $loadgoprogress); ?>>No</option>
+      <option value='true' <?php selected('true', $loadgoprogress); ?>><?php _e( 'Yes', 'loadgo-for-wp') ?></option>
+      <option value='false' <?php selected('false', $loadgoprogress); ?>><?php _e( 'No', 'loadgo-for-wp' ) ?></option>
     </select>
   <?php
-  echo '<div class="description">Set to "Yes" if you want to display progress number while loading. Default: <strong>Yes</strong>.</div>';
+  echo '<div class="description">' . __( 'Set to "Yes" if you want to display progress number while loading.', 'loadgo-for-wp') . '</div>';
 }
 
 //
@@ -271,7 +271,7 @@ function loadgo_plugin_setting_progress_color () {
   $options = get_option('loadgo_options');
   $loadgoprogresscolor = $options['loadgo-progress-color']? $options['loadgo-progress-color'] : '#000';
   echo '<input class="loadgo-bgcolor" data-default-color="#0d77b6" type="text" name="loadgo_options[loadgo-progress-color]" value="'. $loadgoprogresscolor .'" />';
-  echo '<div class="description">Progress color. Default: <strong>#000000</strong>.</div>';
+  echo '<div class="description">' . __( 'Progress color.', 'loadgo-for-wp' ) . '</div>';
 }
 
 //
@@ -282,12 +282,12 @@ function loadgo_plugin_setting_message () {
   $loadgomessage = $options['loadgo-message']? $options['loadgo-message'] : 'false';
   ?>
     <select id="message" name='loadgo_options[loadgo-message]'>
-      <option value='true' <?php selected('true', $loadgomessage); ?>>Yes</option>
-      <option value='false' <?php selected('false', $loadgomessage); ?>>No</option>
+      <option value='true' <?php selected('true', $loadgomessage); ?>><?php _e( 'Yes' ) ?></option>
+      <option value='false' <?php selected('false', $loadgomessage); ?>><?php _e( 'No' ) ?></option>
     </select>
-    <span id="thanks" style="opacity: 0;">Thank you so much! :)</span>
+    <span id="thanks" style="opacity: 0;"><?php _e( 'Thank you so much! :)', 'loadgo-for-wp' ) ?></span>
   <?php
-  echo '<div class="description">Set to "Yes" if you want to display a message so your visitors will know that you are using "LoadGo for WP". If you set this to "Yes", I will be really grateful. Default: <strong>No</strong>.</div>';
+  echo '<div class="description">' . __( 'Set to "Yes" if you want to display a message so your visitors will know that you are using "LoadGo for WP". If you set this to "Yes", I will be really grateful.', 'loadgo-for-wp' ) . '</div>';
 }
 
 //
@@ -297,7 +297,7 @@ function loadgo_plugin_setting_bgcolor () {
   $options = get_option('loadgo_options');
   $loadgocolor = $options['loadgo-bgcolor'];
   echo '<input class="loadgo-bgcolor" data-default-color="#0d77b6" type="text" name="loadgo_options[loadgo-bgcolor]" value="'. $loadgocolor .'" />';
-  echo '<div class="description">Page background color. If LoadGo background color is equals to your logo background color, you page would look better. Default: <strong>#FFFFFF</strong>.</div>';
+  echo '<div class="description">' . __( 'Page background color. If LoadGo background color is equals to your logo background color, you page would look better.', 'loadgo-for-wp') . '</div>';
 }
 
 //
@@ -320,7 +320,7 @@ function loadgo_plugin_setting_size () {
       <option value='100' <?php selected('100', $loadgosize); ?>>100%</option>
     </select>
   <?php
-  echo '<div class="description">Logo size regarding to its original image size (in percentage). Default: <strong>100%</strong>.</div>';
+  echo '<div class="description">' . __( 'Logo size regarding to its original image size (in percentage).', 'loadgo-for-wp' ) . '</div>';
 }
 
 //
@@ -330,7 +330,7 @@ function loadgo_plugin_setting_opacity () {
   $options = get_option('loadgo_options');
   $loadgoopacity = $options['loadgo-opacity']? $options['loadgo-opacity'] : '0.5';
   echo '<input class="loadgo-opacity" type="text" name="loadgo_options[loadgo-opacity]" value="'. $loadgoopacity .'"  />';
-  echo '<div class="description">Overlay opacity. Default: <strong>0.5</strong> (value must be between 0 and 1, both inclusive).</div>';
+  echo '<div class="description">' . __( 'Overlay opacity (value must be between 0 and 1, both inclusive).', 'loadgo-for-wp' ) . '</div>';
 }
 
 //
@@ -341,13 +341,13 @@ function loadgo_plugin_setting_direction () {
   $loadgodirection = $options['loadgo-direction'];
   ?>
     <select name='loadgo_options[loadgo-direction]'>
-      <option value='lr' <?php selected('lr', $loadgodirection); ?>>Left to Right</option>
-      <option value='rl' <?php selected('rl', $loadgodirection); ?>>Right to Left</option>
-      <option value='tb' <?php selected('tb', $loadgodirection); ?>>Top to Bottom</option>
-      <option value='bt' <?php selected('bt', $loadgodirection); ?>>Bottom to Top</option>
+      <option value='lr' <?php selected('lr', $loadgodirection); ?>><?php _e( 'Left to Right', 'loadgo-for-wp' ) ?></option>
+      <option value='rl' <?php selected('rl', $loadgodirection); ?>><?php _e( 'Right to Left', 'loadgo-for-wp' ) ?></option>
+      <option value='tb' <?php selected('tb', $loadgodirection); ?>><?php _e( 'Top to Bottom', 'loadgo-for-wp' ) ?></option>
+      <option value='bt' <?php selected('bt', $loadgodirection); ?>><?php _e( 'Bottom to Top', 'loadgo-for-wp' ) ?></option>
     </select>
   <?php
-  echo '<div class="description">Animation direction. Default: <strong>left to right</strong>.</div>';
+  echo '<div class="description">' . __( 'Animation direction.', 'loadgo-for-wp' ) . '</div>';
 }
 
 // Validate plugin options on save

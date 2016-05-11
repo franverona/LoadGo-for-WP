@@ -49,7 +49,7 @@ wp_enqueue_style( 'loadgocss', plugins_url('../css/loadgo.css', __FILE__) );
       <h3 id="loadgo-progress" style="display:none;color:<?php echo $progress_color; ?>">0%</h3>
 <?php endif; ?>
 <?php if ($message) : ?>
-      <div id="loadgo-message" style="display:none;color:<?php echo $progress_color; ?>">Loader provided by <strong>LoadGo for WP</strong></div>
+      <div id="loadgo-message" style="display:none;color:<?php echo $progress_color; ?>"><?php _e( 'Loader provided by LoadGo for WP' ) ?></div>
 <?php endif; ?>
     </div>
   </div>

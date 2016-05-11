@@ -1,0 +1,212 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LoadGo for WP\n"
+"POT-Creation-Date: 2016-05-11 10:39+0100\n"
+"PO-Revision-Date: 2016-05-11 10:40+0100\n"
+"Last-Translator: Fran Verona <franverona@gmail.com>\n"
+"Language-Team: Fran Verona <franverona@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: loadgo.php\n"
+"X-Poedit-SearchPath-1: loadgo-options.php\n"
+"X-Poedit-SearchPath-2: methods/loadgo_sitewide.php\n"
+
+#: loadgo-options.php:13
+msgid "General options"
+msgstr "Opciones generales"
+
+#: loadgo-options.php:20
+msgid "Visibility"
+msgstr "Visibilidad"
+
+#: loadgo-options.php:28
+msgid "Logo image"
+msgstr "Imagen del logo"
+
+#: loadgo-options.php:36
+msgid "Show progress"
+msgstr "Ver progreso"
+
+#: loadgo-options.php:44
+msgid "Progress color"
+msgstr "Color del progreso"
+
+#: loadgo-options.php:52
+msgid "Show message"
+msgstr "Ver mensaje"
+
+#: loadgo-options.php:61
+msgid "LoadGo options"
+msgstr "Opciones de LoadGo"
+
+#: loadgo-options.php:68
+msgid "Background color"
+msgstr "Color de fondo"
+
+#: loadgo-options.php:75
+msgid "Size"
+msgstr "Tamaño"
+
+#: loadgo-options.php:83
+msgid "Opacity"
+msgstr "Opacidad"
+
+#: loadgo-options.php:91
+msgid "Direction"
+msgstr "Dirección"
+
+#: loadgo-options.php:108
+msgid "Loadgo Settings Page"
+msgstr "Configuración de LoadGo"
+
+#: loadgo-options.php:120
+msgid "Options"
+msgstr "Opciones"
+
+#: loadgo-options.php:124
+msgid "You do not have sufficient permissions to access this page."
+msgstr "No tiene suficientes permisos para ver esta página."
+
+#: loadgo-options.php:140
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: loadgo-options.php:210
+msgid ""
+"These settings let you customize Loadgo style. You can modify overlay color, "
+"animation direction, etc. Take a look at <a href=\"http://franverona.com/"
+"loadgo\" target=\"_blank\">Loadgo Official site</a> for info and examples."
+msgstr ""
+"Esta configuración le permitirá personalizar el estilo de LoadGo. Aquí puede "
+"modificar el color del overlay, la dirección de la animación, etc. Échele un "
+"vistazo a <a href=\"http://franverona.com/loadgo\" target=\"_blank\">la "
+"página oficial (en inglés)</a> para más información y ejemplos."
+
+#: loadgo-options.php:221
+msgid "Everyone"
+msgstr "Todos"
+
+#: loadgo-options.php:222
+msgid "Only admins"
+msgstr "Sólo administradores"
+
+#: loadgo-options.php:225
+msgid ""
+"\"Only admins\" option is a good choice if you are testing a new image and "
+"do not want your new visitors to see it."
+msgstr ""
+"La opción \"Sólo administradores\" es ideal cuando está probando una nueva "
+"imagen y no quiere que sus nuevos visitantes vean los cambios."
+
+#: loadgo-options.php:236
+msgid "Invalid file. Try to upload an image file: jpg, jpeg, gif, png."
+msgstr ""
+"Árchivo no válido. Asegúrese de subir un archivo de tipo jpg, jpeg, gif o "
+"png."
+
+#: loadgo-options.php:243
+msgid "Upload your image here."
+msgstr "Suba su imagen aquí."
+
+#: loadgo-options.php:245
+msgid "An image with transparency (PNG) provides best results."
+msgstr "Una imagen con transparencia (PNG) da mejores resultados."
+
+#: loadgo-options.php:246
+msgid "Optimize your image: do not upload a big file if you will not need it."
+msgstr ""
+"Optimice sus imágenes: no suba archivos muy grandes si no los va a usar."
+
+#: loadgo-options.php:247
+msgid "Try to upload a small version of your logo. Images < 100Kb work better."
+msgstr ""
+"Intente subir una versión reducida de su logo. Imágenes con un tamaño < "
+"100Kb suelen funcionar mejor."
+
+#: loadgo-options.php:260 loadgo-options.php:285
+msgid "Yes"
+msgstr "Sí"
+
+#: loadgo-options.php:261 loadgo-options.php:286
+msgid "No"
+msgstr "No"
+
+#: loadgo-options.php:264
+msgid "Set to \"Yes\" if you want to display progress number while loading."
+msgstr "Seleccione \"Sí\" si desea mostrar el progreso de carga."
+
+#: loadgo-options.php:274
+msgid "Progress color."
+msgstr "Color del progreso"
+
+#: loadgo-options.php:288
+msgid "Thank you so much! :)"
+msgstr "¡Muchas gracias! :)"
+
+#: loadgo-options.php:290
+msgid ""
+"Set to \"Yes\" if you want to display a message so your visitors will know "
+"that you are using \"LoadGo for WP\". If you set this to \"Yes\", I will be "
+"really grateful."
+msgstr ""
+"Seleccione \"Sí\" si desea mostrar un mensaje a sus visitantes para "
+"informarles de que está usando \"LoadGo for WP\". Le estaré muy agradecido "
+"si lo hace."
+
+#: loadgo-options.php:300
+msgid ""
+"Page background color. If LoadGo background color is equals to your logo "
+"background color, you page would look better."
+msgstr ""
+"Color de fondo de la página. Si el color de fondo de LoadGo es igual a este "
+"color, el efecto será mucho mejor."
+
+#: loadgo-options.php:323
+msgid "Logo size regarding to its original image size (in percentage)."
+msgstr "Tamaño del logo respecto a su tamaño original (en porcentaje)."
+
+#: loadgo-options.php:333
+msgid "Overlay opacity (value must be between 0 and 1, both inclusive)."
+msgstr "Opacidad del overlay (el valor debe ser entre 0 y 1, ambos inclusive)."
+
+#: loadgo-options.php:344
+msgid "Left to Right"
+msgstr "Izquierda a Derecha"
+
+#: loadgo-options.php:345
+msgid "Right to Left"
+msgstr "Derecha a Izquierda"
+
+#: loadgo-options.php:346
+msgid "Top to Bottom"
+msgstr "Arriba a Abajo"
+
+#: loadgo-options.php:347
+msgid "Bottom to Top"
+msgstr "Abajo a Arriba"
+
+#: loadgo-options.php:350
+msgid "Animation direction."
+msgstr "Dirección de la animación."
+
+#: methods/loadgo_sitewide.php:52
+msgid "Loader provided by LoadGo for WP"
+msgstr "Cargador hecho con LoadGo for WP"
+
+#~ msgid ""
+#~ "These settings let you customize Loadgo style. You can modify overlay "
+#~ "color, image effect, animation direction, etc. Take a look at <a href="
+#~ "\"http://franverona.com/loadgo\" target=\"_blank\">Loadgo Official site</"
+#~ "a> for info and examples."
+#~ msgstr ""
+#~ "Esta configuración le permitirá personalizar el estilo de LoadGo. Aquí "
+#~ "puede modificar el color del overlay, la dirección de la animación, etc. "
+#~ "Échele un vistazo a <a href=\"http://franverona.com/loadgo\" target="
+#~ "\"_blank\">la página oficial</a> (en inglés) para más información y "
+#~ "ejemplos."

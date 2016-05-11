@@ -4,7 +4,7 @@ Donate link: http://franverona.com/loadgo
 Tags: pace, loading animation, loading, loadgo, logo
 Requires at least: 3.0.1
 Tested up to: 4.5.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,11 +20,12 @@ Features:
 
 *  Upload your logo and use it as a progress bar.
 *  Loading page process will be manage automatically by PACE.
-*  You will be able to customize image size, overlay color, visibility and more.
+*  LoadGo will take care of logo updates when page is loading.
+*  You will be able to customize image size, overlay color, visibility and much more.
 
 == Installation ==
 
-1. Upload `wp-loadgo.zip` to the `/wp-content/plugins/` directory.
+1. Upload `loadgo-for-wp.zip` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Navigate to the Plugins page and select Settings.
 4. Upload your logo, save changes and go to your web.
@@ -52,10 +53,16 @@ To view it in action you can go to <a href="http://franverona.com/wploadgo">http
 
 == Changelog ==
 
+= 1.1 =
+Added translations for english and spanish languages.
+
 = 1.0 =
 First release. Yay!
 
 == Upgrade Notice ==
+
+= 1.1 =
+Added translations for english and spanish languages.
 
 = 1.0 =
 First release!
