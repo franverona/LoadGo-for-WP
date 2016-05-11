@@ -6,8 +6,6 @@ Use your logo as a loader for your website/blog. This plugin uses [PACE](http://
 *  [Working demo](http://franverona.com/wploadgo)
 *  [Official Wordpress plugin page](https://wordpress.org/plugins/loadgo-for-wp/)
 
-Official Wordpress link: [https://wordpress.org/plugins/loadgo-for-wp/](https://wordpress.org/plugins/loadgo-for-wp/)
-
 ## Changelog
 
 **1.1** (11-05-2016)
