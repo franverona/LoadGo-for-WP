@@ -8,6 +8,13 @@ Use your logo as a loader for your website/blog. This plugin uses [PACE](http://
 
 ## Changelog
 
+**1.3** (07-12/2016)
+*  Fix bug with some themes where Pace was overriding body classes.
+
+**1.2** (25-07-2016)
+*  Fix array syntax for PHP < 5.4
+*  Fix body overflow when progress finish.
+
 **1.1** (11-05-2016)
 *  Added translations for english and spanish languages.
 
@@ -54,3 +61,7 @@ Congrats! It means that your page is small, or maybe your connection is super fa
 PNGs files look better because they have transparency. Thus try to use a PNG version of your logo with a background color that fits its main color.
 
 **LoadGo for WP** is under GPLv2 License. Feel free to download, modify and adapt it to your own purposes. If you find any bug, send a pull request or write an issue.
+
+## Donate
+
+This plugin is 100% free, but if you want to support my work you can [make a donation using Paypal](https://www.paypal.me/franverona).

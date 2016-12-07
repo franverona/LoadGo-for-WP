@@ -1,10 +1,10 @@
 === LoadGo for WP ===
 Contributors: franverona
-Donate link: http://franverona.com/loadgo
+Donate link: https://www.paypal.me/franverona
 Tags: pace, loading animation, loading, loadgo, logo
 Requires at least: 3.0.1
-Tested up to: 4.5.1
-Stable tag: 1.1
+Tested up to: 4.7
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,8 @@ Features:
 *  Loading page process will be manage automatically by PACE.
 *  LoadGo will take care of logo updates when page is loading.
 *  You will be able to customize image size, overlay color, visibility and much more.
+
+This plugin is 100% free, but if you want to support my work you can <a href="https://www.paypal.me/franverona">make a donation using Paypal</a>.
 
 == Installation ==
 
@@ -49,9 +51,18 @@ PNGs files look better because they have transparency. Thus try to use a PNG ver
 
 == Screenshots ==
 
-To view it in action you can go to <a href="http://franverona.com/wploadgo">http://franverona.com/wploadgo</a> or go to <a href="http://franverona.com/loadgo">http://franverona.com/loadgo</a> for a full list of plugin examples and options.
+1. Logo showing progress when loading page.
+2. General options.
+3. Plugin options.
 
 == Changelog ==
+
+= 1.3 =
+Fix bug with some themes where Pace was overriding body classes.
+
+= 1.2 =
+Fix array syntax for PHP < 5.4
+Fix body overflow when progress finish.
 
 = 1.1 =
 Added translations for english and spanish languages.
@@ -60,6 +71,13 @@ Added translations for english and spanish languages.
 First release. Yay!
 
 == Upgrade Notice ==
+
+= 1.3 =
+Fix bug with some themes where Pace was overriding body classes.
+
+= 1.2 =
+Fix array syntax for PHP < 5.4
+Fix body overflow when progress finish.
 
 = 1.1 =
 Added translations for english and spanish languages.

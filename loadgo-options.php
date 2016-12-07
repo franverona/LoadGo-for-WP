@@ -382,16 +382,16 @@ function loadgo_validate_options ($input) {
   }
 
   $input['loadgo-visibility'] = strtolower( $input['loadgo-visibility'] );
-  if ( !in_array( $input['loadgo-visibility'], ['all', 'admin'] ) )
+  if ( !in_array( $input['loadgo-visibility'], array('all', 'admin') ) )
     $input['loadgo-visibility'] = 'admin';
 
   $input['loadgo-progress'] = strtolower( $input['loadgo-progress'] );
-  if ( !in_array( $input['loadgo-progress'], ['true', 'false'] ) )
+  if ( !in_array( $input['loadgo-progress'], array('true', 'false') ) )
     $input['loadgo-progress'] = 'false';
   $input['loadgo-progress-color'] = wp_filter_nohtml_kses($input['loadgo-progress-color']);
 
   $input['loadgo-message'] = strtolower( $input['loadgo-message'] );
-  if ( !in_array( $input['loadgo-message'], ['true', 'false'] ) )
+  if ( !in_array( $input['loadgo-message'], array('true', 'false') ) )
     $input['loadgo-message'] = 'false';
 
   $input['loadgo-bgcolor'] = wp_filter_nohtml_kses($input['loadgo-bgcolor']);
@@ -404,7 +404,7 @@ function loadgo_validate_options ($input) {
   $input['loadgo-opacity'] = $opacity;
 
   $input['loadgo-direction'] = strtolower( $input['loadgo-direction'] );
-  if ( !in_array( $input['loadgo-direction'], ['lr', 'rl', 'tb', 'bt'] ) )
+  if ( !in_array( $input['loadgo-direction'], array('lr', 'rl', 'tb', 'bt') ) )
     $input['loadgo-direction'] = 'lr';
 
   return $input;

@@ -75,8 +75,8 @@ wp_enqueue_style( 'loadgocss', plugins_url('../css/loadgo.css', __FILE__) );
 
           var overlayDOM = document.getElementById('loadgo-internal');
 
-          var perc = <?php echo $size ?>, 
-              width = LOADGO_LOGO.width * (perc / 100), 
+          var perc = <?php echo $size ?>,
+              width = LOADGO_LOGO.width * (perc / 100),
              height = LOADGO_LOGO.height * (perc / 100);
           overlayDOM.style.width = width + 'px';
           overlayDOM.style.height = height + 'px';
@@ -89,6 +89,16 @@ wp_enqueue_style( 'loadgocss', plugins_url('../css/loadgo.css', __FILE__) );
           };
           Loadgo.init(LOADGO_LOGO, loadgoParams);
           window.clearInterval(interval);
+        }
+      }, 100);
+
+      // Dispatch resize event when LoadGo finish
+      var resizeInterval = window.setInterval(function () {
+        if (typeof Loadgo !== 'undefined') {
+          if (Loadgo.getprogress(LOADGO_LOGO) === 100) {
+            window.dispatchEvent(new Event('resize'));
+            window.clearInterval(resizeInterval);
+          }
         }
       }, 100);
     };
