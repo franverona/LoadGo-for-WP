@@ -8,7 +8,10 @@ Use your logo as a loader for your website/blog. This plugin uses [PACE](http://
 
 ## Changelog
 
-**1.3** (07-12/2016)
+**1.4** (18-07-2017)
+*  LoadGo version upgraded to 2.2
+
+**1.3** (07-12-2017)
 *  Fix bug with some themes where Pace was overriding body classes.
 
 **1.2** (25-07-2016)
@@ -41,8 +44,6 @@ Use your logo as a loader for your website/blog. This plugin uses [PACE](http://
 4. Navigate to the Plugins page and select Settings.
 
 5. Upload your logo, save changes and go to your web.
-
-6. Cool, right?
 
 Don't forget to upload your own logo and set "Visibility" option to "Everyone", so all your visitors can see it.
 
