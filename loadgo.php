@@ -6,7 +6,7 @@ Text Domain: loadgo-for-wp
 Domain Path: /languages
 Plugin URI: http://franverona.com/loadgo
 Description: Create an automatic page load progress bar using <a href="http://github.hubspot.com/pace/docs/welcome/">PACE</a> and <a href="http://franverona.com/loadgo">Loadgo</a> Javascript plugin.
-Version: 1.3
+Version: 1.4
 Author: Fran Verona
 Author URI: http://franverona.com
 */

@@ -3,8 +3,8 @@ Contributors: franverona
 Donate link: https://www.paypal.me/franverona
 Tags: pace, loading animation, loading, loadgo, logo
 Requires at least: 3.0.1
-Tested up to: 4.7
-Stable tag: 1.3
+Tested up to: 4.8
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,9 @@ PNGs files look better because they have transparency. Thus try to use a PNG ver
 
 == Changelog ==
 
+= 1.4 =
+LoadGo version upgraded to 2.2
+
 = 1.3 =
 Fix bug with some themes where Pace was overriding body classes.
 
@@ -71,6 +74,9 @@ Added translations for english and spanish languages.
 First release. Yay!
 
 == Upgrade Notice ==
+
+= 1.4 =
+LoadGo version upgraded to 2.2
 
 = 1.3 =
 Fix bug with some themes where Pace was overriding body classes.

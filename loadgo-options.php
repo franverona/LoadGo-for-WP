@@ -129,11 +129,8 @@ function loadgo_render_form () {
       <?php settings_fields('loadgo_plugin_options'); ?>
 
       <?php 
-
         do_settings_sections('loadgo_plugin_general_options_section');
-
         do_settings_sections('loadgo_plugin_display_options_section');
-
       ?>
 
       <p class="submit">

@@ -82,9 +82,9 @@ wp_enqueue_style( 'loadgocss', plugins_url('../css/loadgo.css', __FILE__) );
           overlayDOM.style.height = height + 'px';
 
           var loadgoParams = {
-            bgcolor:      <?php echo "'" . $bgcolor . "'"; ?>,
-            opacity:      <?php echo "'" . $opacity . "'"; ?>,
-            direction:    <?php echo "'" . $direction . "'"; ?>,
+            bgcolor:      '<?php echo $bgcolor ?>',
+            opacity:      '<?php echo $opacity ?>',
+            direction:    '<?php echo $direction ?>',
             animated:     false
           };
           Loadgo.init(LOADGO_LOGO, loadgoParams);
