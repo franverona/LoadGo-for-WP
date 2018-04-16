@@ -8,6 +8,10 @@ Use your logo as a loader for your website/blog. This plugin uses [PACE](http://
 
 ## Changelog
 
+**1.5** (16-04-2018)
+
+* LoadGo version upgraded to 2.2.1
+
 **1.4** (18-07-2017)
 *  LoadGo version upgraded to 2.2
 
